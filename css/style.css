@@ -1,148 +1,215 @@
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
-:root{
-  --primary-1: hsl(205, 86%, 17%);
-  --primary-2: hsl(205, 77%, 27%);
-  --primary-3: hsl(205, 72%, 37%);
-  --primary-4: hsl(205, 63%, 48%);
-  --primary-5: hsl(205, 78%, 60%);
-  --primary-6: hsl(205, 89%, 70%);
-  --primary-7: hsl(205, 90%, 76%);
-  --primary-8: hsl(205, 86%, 81%);
-  --primary-9: hsl(205, 90%, 88%);
-  --primary-10: hsl(205, 100%, 96%);
-  --grey-1: hsl(209, 61%, 16%);
-  --grey-2: hsl(211, 39%, 23%);
-  --grey-3: hsl(209, 34%, 30%);
-  --grey-4: hsl(209, 28%, 39%);
-  --grey-5: hsl(210, 22%, 49%);
-  --grey-6: hsl(209, 23%, 60%);
-  --grey-7: hsl(211, 27%, 70%);
-  --grey-8: hsl(210, 31%, 80%);
-  --grey-9: hsl(212, 33%, 89%);
-  --grey-10: hsl(210, 36%, 96%);
-  --white: #fff;
-  --red-dark: hsl(360, 67%, 44%);
-  --red-light: hsl(360, 71%, 66%);
-  --green-dark: hsl(125, 67%, 44%);
-  --green-light: hsl(125, 71%, 66%);
-  --black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-}
-::after,
-::before {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* set up the body */
+
 body {
-  font-family: var(--ff-secondary);
-  background: var(--grey-10);
-  color: var(--grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-body {
-  font-family: var(--ff-secondary);
-  background: var(--grey-10);
-  color: var(--grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
-#header-img {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right top, #972fa1, #862fa1, #7660b2, #6860b2, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #308cd8, #308cd8, #0049a8 , #004ea8);
 }
 
-main {
-  min-height: calc(100vh - 3rem);
-}
-#header {
-  display: flex;
-  justify-content: space-between;
-}
-ul {
-  display: flex;
+/* Styling header */
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 
+/* Ajust the logo  */
+#header-img{
+  height: auto; 
+  width: auto; 
+  max-width: 100px; 
+  max-height: 100px;
+  position:absolute;
+  top: 12px;
+  left: 34px;
+  z-index: 100;
+}
+
+/* The navigation bar */
 #nav-bar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 1rem;
-  gap: 1 rem;
+  width: 100%; /* Full width */
 }
 
+/* Links inside the navbar */
+.nav-link{
+  float: right; 
+  display: block;
+  color: rgb(70, 67, 83);
+  text-align: center;
+  padding: 36px 30px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+#nav-bar a[href="#products"]:hover {
+  background: #2f53a1;
+  /* color: black; */
+}
+
+#nav-bar a[href="#video"]:hover {
+  background: rgb(245, 245, 245);
+  /* color: black; */
+}
+
+#nav-bar a[href="#pricing"]:hover {
+  background: #9530d8;
+  /* color: black; */
+}
+
+
+/* positioning form */
+#form{
+  width: 100%;
+  height: 70vh;
+  display: flex; 
+  flex-direction: column;
+  justify-content:center;
+  align-items: center; 
+  color: black;
+}
+
+/* styling e-mail */
+#email{
+  border-radius: 1em;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border-color: black;
+}
+
+/* styling submit */
+#submit{
+  border-radius: 1em;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  color:  whitesmoke;
+  outline: none;
+  background-color:  black;
+  border-color:  black;
+}
+
+#buynow{
+  border-radius: 1em;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  outline: none;
+  color: white;
+  background-color: black;
+}
+
+/* Styling texts */
+#products{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+  grid-gap: 60px;
+  color:  black;
+}
+/* styling video */
+
+#video{
+  display: block;
+  margin: auto;
+}
+
+/* Styling pricing */
+
+#pricing{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.computers{
+  padding: 2%;
+  border: 1px solid black;  
+  margin: 50px;
+  text-align: center;
+  color: black;
+  line-height: 200%;
+  flex: 1 1 0px; 
+  background-color: white; 
+}
+
+h4{
+  font-family: 'Lucida Sans';
+  font-size:x-large;
+}
+
+/* Styling footer */
+footer{
+  text-align: right;
+  background-color:  white;
+  color: rgb(63, 56, 56);
+}
+
+.foot{
+  margin-right: 90px;
+  line-height: 200%;
+  font-size: 0.8em;
+}
+
+.foot > a{
+  padding-left: 20px;
+}
+
+/* medias */
+
+@media (max-width: 600px) {
+  
+  #header {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #form {
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 50px;
+      padding-top:80px;
+}
+  
+  
+#products {
+  margin-top: 0px;
+  padding-top: 50px;
+}
+  
+
+  .content {
+      display: flex;
+      padding-top:0.5rem;
+      align-items: flex-start;
+      justify-content: center;
+      height: 125px;
+      width: 20vw;
+}
+  
+  #pricing {
+      display: flex;
+      flex-direction: column;
+  }
 }
